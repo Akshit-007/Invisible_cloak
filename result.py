@@ -12,11 +12,11 @@ while cap.isOpened():
         hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
         # cv2.imshow("hsv", hsv)
 
-        red = np.uint8([[[0, 0, 0]]])
+        red = np.uint8([[[0, 0, 255]]])
         hsv_red = cv2.cvtColor(red, cv2.COLOR_BGR2HSV)
 
-        l_red = np.array([0, 0, 0], np.uint8)
-        h_red = np.array([350, 55, 100], np.uint8)
+        l_red = np.array([0, 100, 100], np.uint8)
+        h_red = np.array([10, 255, 255], np.uint8)
         mask = cv2.inRange(hsv, l_red, h_red)
         # cv2.imshow("mask", mask)
 
